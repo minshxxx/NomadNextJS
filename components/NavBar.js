@@ -5,12 +5,15 @@ export default function NavBar() {
   const router = useRouter();
   return (
     <nav>
-      <Link href="/">
-        <a className={router.pathname === "/" ? "active" : null}>Home</a>
-      </Link>
-      <Link href="/about">
-        <a className={router.pathname === "/about" ? "active" : null}>About</a>
-      </Link>
+      <img src="/vercel.svg" />
+      <div>
+        <Link href="/">
+          <a className={router.pathname === "/" ? "active" : ""}>Home</a>
+        </Link>
+        <Link href="/about">
+          <a className={router.pathname === "/about" ? "active" : ""}>About</a>
+        </Link>
+      </div>
       <style jsx>{`
         nav {
           display: flex;
